@@ -21,7 +21,7 @@ const Supplier = sequelize.define(
             allowNull: false,
         },
         bank: {
-            type: DataTypes.STRING,
+            type: DataTypes.ENUM('BancoEstado', 'Banco de Chile', 'Santander', 'BCI', 'Scotiabank', 'Itau', 'Banco Falabella', 'Banco BICE', 'Banco Security', 'Banco Consorcio'),
             allowNull: false,
         },
         accountNumber: {
@@ -29,7 +29,7 @@ const Supplier = sequelize.define(
             allowNull: true,
         },
         accountType: {
-            type: DataTypes.STRING,
+            type: DataTypes.ENUM('Cuenta Corriente', 'Cuenta ahorro'),
             allowNull: true,
         }
 

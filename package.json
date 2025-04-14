@@ -16,6 +16,7 @@
     "@sequelize/postgres": "^7.0.0-alpha.46",
     "dotenv": "^16.4.7",
     "express": "^5.1.0",
+    "express-async-handler": "^1.2.0",
     "express-validator": "^7.2.1",
     "nodemon": "^3.1.9",
     "pg": "^8.14.1",

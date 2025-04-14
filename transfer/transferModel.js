@@ -18,7 +18,7 @@ const Transfer = sequelize.define(
             allowNull: true,
         },
         status: {
-            type: DataTypes.STRING,
+            type: DataTypes.ENUM('pending', 'completed', 'details'),
             allowNull: false,
         },
         nextTransfer: {

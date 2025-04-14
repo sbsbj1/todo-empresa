@@ -7,13 +7,14 @@ import Supplier from './supplier/supplierModel.js';
 import supplierRoute from './supplier/supplierRoute.js';
 import Transfer from './transfer/transferModel.js';
 import transferRoute from './transfer/transferRoute.js';
+import errorMiddleware from './config/errorMiddleware.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-app.use('/api', userRoute, supplierRoute, transferRoute);
+app.use('/api', userRoute, supplierRoute, transferRoute, errorMiddleware);
 
 
 async function startServer() {
